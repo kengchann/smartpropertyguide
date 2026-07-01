@@ -15,13 +15,39 @@ click a button, and it's live.
    link in that email and set a password. You only need to do this once.
 3. After that, every time you visit `yourwebsite.com/admin`, just enter your email and
    password and click **Log In**.
-4. You'll land on a dashboard with two sections: **Featured Developments** and **Blog Posts**.
+4. You'll land on a dashboard with three sections: **Site Profile & Settings**, **Featured
+   Developments**, and **Blog Posts**.
 
 > 🔒 Keep your password private — anyone who logs in can change the live website.
 
 ---
 
-## 2. How to Add a New Featured Development
+## 2. How to Update Your Profile Photo, Cover Photo, and Bio
+
+This is the "make it feel like your Facebook profile" section — one photo behind your name at
+the top of the About page (and the homepage background), and one round profile photo, just like
+a Facebook cover photo + profile picture.
+
+1. From the dashboard, click **Site Profile & Settings** on the left, then click **"Profile &
+   Contact Info"**.
+2. To add your **round profile photo**: find the **Profile Photo** box, click **"Choose an
+   image"**, and pick a square-ish photo of yourself from your computer.
+3. To add your **cover/header photo**: find the **Cover / Header Photo** box the same way. This
+   one shows wide, so a landscape photo (a nice property photo, an event photo, anything
+   professional) works best.
+4. You can also update your **Name, Title, Company, Tagline, Bio, phone, email, WhatsApp/
+   Messenger links, PRC license, years of experience, service areas, and specialties** — all on
+   this same page.
+5. When you're done, click **Publish** → **Publish now** at the top.
+6. Give it a couple of minutes (see Section 6), then check the homepage and About page — your
+   new photos and info should be live everywhere they appear on the site.
+
+> 💡 Tip: photos that are too small or blurry will look that way on the live site too — use the
+> best-quality version of a photo you have.
+
+---
+
+## 3. How to Add a New Featured Development
 
 1. From the dashboard, click **Featured Developments** on the left.
 2. Click the green **"+ Development"** button near the top.
@@ -46,11 +72,11 @@ click a button, and it's live.
    once it's uploaded.
 5. When everything looks right, click the green **Publish** button in the top-right, then
    **Publish now**.
-6. That's it — the new development is live (see timing note in Section 5).
+6. That's it — the new development is live (see timing note in Section 6).
 
 ---
 
-## 3. How to Edit or Remove a Development (e.g. Mark as "Sold Out")
+## 4. How to Edit or Remove a Development (e.g. Mark as "Sold Out")
 
 **To edit (e.g. mark a project Sold Out):**
 1. Click **Featured Developments**, then click on the project you want to change.
@@ -67,7 +93,7 @@ click a button, and it's live.
 
 ---
 
-## 4. How to Write and Publish a Blog Post
+## 5. How to Write and Publish a Blog Post
 
 1. From the dashboard, click **Blog Posts** on the left.
 2. Click **"+ Post"**.
@@ -85,7 +111,7 @@ click a button, and it's live.
 
 ---
 
-## 5. How Long Until Changes Show Up on the Website?
+## 6. How Long Until Changes Show Up on the Website?
 
 After you click **Publish**, the website automatically rebuilds itself. This usually takes
 **1–3 minutes**. If you refresh the live website right after publishing and don't see your
@@ -93,7 +119,7 @@ change yet, that's completely normal — just wait a couple of minutes and refre
 
 ---
 
-## 6. Something Looks Broken vs. What's Normal
+## 7. Something Looks Broken vs. What's Normal
 
 **This is normal, don't worry:**
 - The site takes a minute or two to update after you click Publish.

@@ -1,5 +1,4 @@
 {
-  "_placeholder_note": "Real business info from the agent — safe to use as-is. Only the fields marked (placeholder) below still need her real values.",
   "pageName": "Smart Property Guide",
   "name": "Carolyn Mendoza",
   "title": "Assistant Vice President of Sales",
@@ -10,23 +9,22 @@
   "email": "carolynmendoza.brittany@gmail.com",
   "whatsappUrl": "https://wa.me/639279180332",
   "messengerUrl": "https://m.me/SmartPropertyGuidee",
-  "messengerUrlIsPlaceholder": false,
   "instagramHandle": "@yourrealtor.carolyn",
   "instagramUrl": "https://instagram.com/yourrealtor.carolyn",
   "prcLicenseDisplay": "PRC License No. 0000000 (placeholder)",
-  "serviceAreas": ["Metro Manila", "Cavite", "Laguna", "Quezon City"],
-  "serviceAreasIsPlaceholder": true,
   "yearsExperienceDisplay": "X+ Years in Real Estate (placeholder)",
+  "serviceAreas": ["Metro Manila", "Cavite", "Laguna", "Quezon City"],
   "specialties": [
     "Pre-Selling House & Lot Communities",
     "Condominium / High-Rise Units",
     "Rent-to-Own Guidance",
     "First-Time Buyer Support"
   ],
-  "bioIsPlaceholder": true,
   "bioParagraphs": [
     "Carolyn Mendoza serves as Assistant Vice President of Sales at Vista Land International Premier, where she helps Filipino families, OFWs, and first-time investors find the right pre-selling home across Vista Land's trusted brands.",
     "Her focus is on making the buying process clear and pressure-free — walking clients through reservation, financing options, and turnover timelines so they know exactly what to expect at every stage.",
     "Whether it's a house-and-lot community for a growing family or a condo unit for a young professional starting out, Carolyn takes the time to match clients with a development and payment plan that actually fits their budget and goals."
-  ]
+  ],
+  "profileImage": "",
+  "coverImage": ""
 }

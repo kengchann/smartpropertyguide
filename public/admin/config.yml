@@ -10,6 +10,36 @@ public_folder: "/images/uploads"
 publish_mode: simple
 
 collections:
+  - name: "settings"
+    label: "Site Profile & Settings"
+    editor:
+      preview: false
+    files:
+      - file: "src/data/agent.json"
+        label: "Profile & Contact Info"
+        name: "agent"
+        format: "json"
+        fields:
+          - { label: "Business / Page Name", name: "pageName", widget: "string" }
+          - { label: "Cover / Header Photo", name: "coverImage", widget: "image", required: false, hint: "Shows behind the homepage headline and at the top of the About page — like a Facebook cover photo. Recommended size 1600x900px or wider." }
+          - { label: "Profile Photo", name: "profileImage", widget: "image", required: false, hint: "Her headshot — shows as a circle at the top of the About page and a small icon in the site header. Recommended: a square photo." }
+          - { label: "Agent Name", name: "name", widget: "string" }
+          - { label: "Title", name: "title", widget: "string", hint: "e.g. Assistant Vice President of Sales" }
+          - { label: "Company", name: "company", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string", hint: "Shows big on the homepage headline" }
+          - { label: "Bio Paragraphs", name: "bioParagraphs", widget: "list", hint: "Add one paragraph per line — shown on the About page under 'Her Story'" }
+          - { label: "Phone (as shown on site)", name: "phoneDisplay", widget: "string", hint: "e.g. 0927 918 0332" }
+          - { label: "Phone (international format, for links)", name: "phoneIntl", widget: "string", hint: "e.g. +639279180332 — no spaces or dashes" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp Link", name: "whatsappUrl", widget: "string", hint: "e.g. https://wa.me/639279180332" }
+          - { label: "Messenger Link", name: "messengerUrl", widget: "string", hint: "e.g. https://m.me/YourPageName" }
+          - { label: "Instagram Handle (as shown on site)", name: "instagramHandle", widget: "string" }
+          - { label: "Instagram Link", name: "instagramUrl", widget: "string" }
+          - { label: "PRC License (as shown on site)", name: "prcLicenseDisplay", widget: "string" }
+          - { label: "Years of Experience (as shown on site)", name: "yearsExperienceDisplay", widget: "string" }
+          - { label: "Service Areas", name: "serviceAreas", widget: "list", hint: "Add one area per line, e.g. Metro Manila" }
+          - { label: "Specialties", name: "specialties", widget: "list", hint: "Add one per line" }
+
   - name: "projects"
     label: "Featured Developments"
     label_singular: "Development"

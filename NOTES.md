@@ -83,6 +83,20 @@ hardcoded).
 Before going live, either replace each entry with real project details via the CMS, or delete
 the sample entries once real ones are added.
 
+## 👤 Site Profile & Settings is now CMS-editable
+
+`src/data/agent.json` (name, title, bio, contact links, service areas, specialties, and two new
+image fields: `profileImage` and `coverImage`) is wired into Decap CMS as a "files" collection
+called **Site Profile & Settings**. Both image fields default to an empty string, in which case
+the site falls back to a placeholder: an abstract profile icon (About page) and the stock hero
+photo (`hero-villa.jpg`) / arches photo (`about-arches.jpg`) for the cover. Once Carolyn or her
+team uploads real photos through the CMS, they automatically replace the placeholders
+everywhere they're used (homepage hero background, About page cover + circular profile photo,
+small avatar in the site header) — no code changes needed.
+
+The About page is now styled like a Facebook profile: a wide cover photo band with a circular
+profile picture overlapping the seam, name/title/bio centered below.
+
 ## 🎨 Design direction
 
 Redesigned toward a "luxury real estate" feel per request: deep charcoal/near-black +
