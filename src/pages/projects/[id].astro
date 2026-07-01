@@ -45,17 +45,21 @@ const soldOut = project.status === "Sold Out";
       <span class="text-ink/70">{project.name}</span>
     </nav>
 
-    <div class="relative mt-4 overflow-hidden rounded-2xl bg-primary-900">
-      <img src={project.image} alt={`${project.name} — sample placeholder image`} class="aspect-[16/9] w-full object-cover sm:aspect-[21/9]" />
-      <span class:list={["absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-semibold", statusStyles[project.status] ?? "bg-white/90 text-ink"]}>
+    <div class="relative mt-4 overflow-hidden rounded-lg bg-primary-900">
+      <img src={project.image} alt={project.name} class="aspect-[16/9] w-full object-cover sm:aspect-[21/9]" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+      <span class:list={["absolute right-4 top-4 rounded-sm px-3 py-1 text-xs font-semibold uppercase tracking-wider", statusStyles[project.status] ?? "bg-white/90 text-ink"]}>
         {project.status}
+      </span>
+      <span class="absolute bottom-4 left-4 rounded-sm bg-black/50 px-2.5 py-1 text-[11px] uppercase tracking-wider text-white/80">
+        Sample Photo
       </span>
     </div>
 
     <div class="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-3">
       <div class="lg:col-span-2">
-        <p class="text-xs font-semibold uppercase tracking-wide text-terracotta-500">{project.brandTag}</p>
-        <h1 class="mt-1 font-display text-2xl font-bold text-primary-700 sm:text-3xl">{project.name}</h1>
+        <p class="text-xs font-semibold uppercase tracking-[0.15em] text-accent-600">{project.brandTag}</p>
+        <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">{project.name}</h1>
         <p class="mt-1 text-sm text-ink/60">{project.location}</p>
 
         <div class="prose prose-sm mt-5 max-w-none text-ink/80 sm:text-base">
@@ -110,7 +114,7 @@ const soldOut = project.status === "Sold Out";
             href={whatsappInquiry}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center rounded-full bg-primary-700 px-5 py-3 text-sm font-semibold text-cream transition-colors hover:bg-primary-600"
+            class="inline-flex items-center justify-center rounded-sm bg-primary-700 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-cream transition-colors hover:bg-primary-600"
           >
             Chat on WhatsApp
           </a>
@@ -118,13 +122,13 @@ const soldOut = project.status === "Sold Out";
             href={agent.messengerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center rounded-full border border-primary-700 px-5 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+            class="inline-flex items-center justify-center rounded-sm border border-primary-700 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
           >
             Message on Messenger
           </a>
           <a
             href="/contact"
-            class="inline-flex items-center justify-center rounded-full border border-primary-200 px-5 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-50"
+            class="inline-flex items-center justify-center rounded-sm border border-primary-200 px-5 py-3 text-xs font-semibold uppercase tracking-wider text-primary-700 transition-colors hover:bg-primary-50"
           >
             Send an Inquiry Form
           </a>

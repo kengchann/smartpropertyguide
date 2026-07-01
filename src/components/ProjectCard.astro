@@ -27,41 +27,47 @@ const statusStyles: Record<string, string> = {
 };
 ---
 
-<article class="group flex flex-col overflow-hidden rounded-2xl border border-primary-100 bg-white shadow-sm transition-shadow hover:shadow-md">
-  <div class="relative aspect-[8/5] w-full overflow-hidden bg-primary-900">
+<article class="group flex flex-col overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 hover:shadow-xl">
+  <div class="relative aspect-[4/3] w-full overflow-hidden bg-primary-900">
     <img
       src={project.image}
-      alt={`${project.name} — sample placeholder image`}
-      class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+      alt={project.name}
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       loading="lazy"
     />
-    <span class:list={["absolute right-3 top-3 rounded-full px-3 py-1 text-xs font-semibold", statusStyles[project.status] ?? "bg-white/90 text-ink"]}>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+    <span class:list={["absolute right-3 top-3 rounded-sm px-3 py-1 text-[11px] font-semibold uppercase tracking-wider", statusStyles[project.status] ?? "bg-white/90 text-ink"]}>
       {project.status}
+    </span>
+    <span class="absolute bottom-3 left-3 rounded-sm bg-black/50 px-2 py-0.5 text-[10px] uppercase tracking-wider text-white/80">
+      Sample Photo
     </span>
   </div>
 
-  <div class="flex flex-1 flex-col p-5">
-    <p class="text-xs font-semibold uppercase tracking-wide text-terracotta-500">{project.brandTag}</p>
-    <h3 class="mt-1 font-display text-xl font-bold text-primary-700">{project.name}</h3>
-    <p class="mt-1 text-sm text-ink/60">{project.location}</p>
+  <div class="flex flex-1 flex-col p-6">
+    <p class="text-[11px] font-semibold uppercase tracking-[0.15em] text-accent-600">{project.brandTag}</p>
+    <h3 class="mt-2 font-display text-2xl font-bold text-primary-700">{project.name}</h3>
+    <p class="mt-1 text-sm italic text-ink/60">{project.location}</p>
 
-    <dl class="mt-3 space-y-1 text-sm text-ink/80">
+    <div class="my-4 h-px bg-primary-100"></div>
+
+    <dl class="space-y-1.5 text-sm text-ink/80">
       <div class="flex justify-between"><dt>Price</dt><dd class="font-semibold text-primary-700">{project.priceLabel}</dd></div>
       <div class="flex justify-between"><dt>Layout</dt><dd>{project.bedrooms}</dd></div>
       <div class="flex justify-between"><dt>Area</dt><dd>{project.areaLabel}</dd></div>
     </dl>
 
-    <div class="mt-3 flex flex-wrap gap-1.5">
+    <div class="mt-4 flex flex-wrap gap-1.5">
       {project.paymentTerms.map((term) => (
-        <span class="rounded-full bg-primary-50 px-2.5 py-1 text-xs font-medium text-primary-600">{term}</span>
+        <span class="rounded-sm bg-primary-50 px-2.5 py-1 text-xs font-medium text-primary-600">{term}</span>
       ))}
     </div>
 
     <a
       href={`/projects/${project.id}`}
-      class="mt-5 inline-flex items-center justify-center rounded-full border border-primary-700 px-4 py-2 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+      class="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-primary-700 transition-colors hover:text-accent-600"
     >
-      View Details
+      View Details <span aria-hidden="true">&rarr;</span>
     </a>
   </div>
 </article>

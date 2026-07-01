@@ -10,7 +10,7 @@ bedrooms: "1–2 Bedrooms"
 areaLabel: "Floor area: 28–48 sqm"
 paymentTerms: ["Spot Cash", "Bank Financing"]
 status: "Sold Out"
-image: "/images/projects/northview-pine-residences.svg"
+image: "/images/projects/northview-pine-residences.jpg"
 ---
 
 Placeholder entry demonstrating how a fully sold-out project would be displayed and clearly marked for site visitors.

@@ -52,16 +52,45 @@ specifically so as not to reuse real developer names, copy, or photos without a 
 Every entry has `isSample: true` in its frontmatter so it's programmatically identifiable, and
 the Projects/Blog listing pages both show an on-page notice that sample content is present.
 
-**Images**: all project + blog cover photos are hand-drawn SVG placeholders
-(`public/images/projects/*.svg`, `public/images/blog/*.svg`) — simple icon graphics with a
-"SAMPLE PLACEHOLDER IMAGE" label baked into the image itself, so it's impossible to mistake for
-a real photo. **Do not replace these with scraped or downloaded CrownAsia/Vista Land marketing
-photos** — those are copyrighted to the developers. Replace with photos Carolyn is actually
+**Images**: all project + blog cover photos are real stock photographs from
+[Unsplash](https://unsplash.com) (free under the
+[Unsplash License](https://unsplash.com/license) — free for commercial use, no permission or
+attribution required, though credited below anyway for traceability). None of these show an
+actual CrownAsia/Vista Land property — they're generic "this is the kind of home/condo this
+would be" stand-ins. Every project/blog card and detail page also shows a small "Sample Photo"
+tag directly on the image itself so visitors can't mistake it for a real listing photo.
+
+**Do not replace these with scraped or downloaded CrownAsia/Vista Land marketing photos** —
+those are copyrighted to the developers. Replace with photos Carolyn is actually
 licensed/authorized to publish (developer press kits she has access to, or her own site-visit
-photos) — she can upload replacements herself through the CMS (see AGENT-GUIDE.md).
+photos) — she can upload replacements herself through the CMS (see AGENT-GUIDE.md), which will
+also remove the "Sample Photo" tag automatically (it's tied to the placeholder frontmatter, not
+hardcoded).
+
+| File | Unsplash photo ID |
+|---|---|
+| `public/images/site/hero-villa.jpg` | photo-1580587771525-78b9dba3b914 |
+| `public/images/site/about-arches.jpg` | photo-1524230572899-a752b3835840 |
+| `public/images/projects/emerald-grove-estates.jpg` | photo-1600596542815-ffad4c1539a9 |
+| `public/images/projects/maple-hills-community.jpg` | photo-1600585154340-be6161a56a0c |
+| `public/images/projects/willow-park-residences.jpg` | photo-1523217582562-09d0def993a6 |
+| `public/images/projects/metro-skyline-residences.jpg` | photo-1486406146926-c627a92ad1ab |
+| `public/images/projects/riverside-heights-taft.jpg` | photo-1545324418-cc1a3fa10c00 |
+| `public/images/projects/northview-pine-residences.jpg` | photo-1600210492486-724fe5c67fb0 |
+| `public/images/blog/payment-options-guide.jpg` | photo-1560518883-ce09059eeffa |
+| `public/images/blog/first-time-buyer-questions.jpg` | photo-1450101499163-c8848c66ca85 |
 
 Before going live, either replace each entry with real project details via the CMS, or delete
 the sample entries once real ones are added.
+
+## 🎨 Design direction
+
+Redesigned toward a "luxury real estate" feel per request: deep charcoal/near-black +
+muted gold palette (replacing the earlier warm teal/terracotta look), Playfair Display serif
+for headings paired with Inter for body text, sharp-cornered buttons with uppercase
+letter-spaced labels, and a full-bleed photographic hero. Theme tokens live in
+[`src/styles/global.css`](src/styles/global.css) (`primary-*` = charcoal shades, `accent-*` =
+gold shades) — change values there to retheme the whole site at once.
 
 ## 📰 Sample blog posts — general advice, not proprietary
 
@@ -103,7 +132,8 @@ correct Markdown file.
 Nothing built requires a paid plan:
 - Astro, Tailwind, Decap CMS — free, open source
 - Netlify free tier: hosting, Identity (≤1,000 users), Git Gateway, Forms (≤100 submissions/mo) — all free
-- Google Fonts (Inter, Plus Jakarta Sans) — free, loaded via CDN link, no account needed
+- Google Fonts (Inter, Playfair Display) — free, loaded via CDN link, no account needed
+- Unsplash stock photos — free under the Unsplash License, no account needed
 
 The only future cost is the domain name itself (a separate purchase, whenever ready) — hosting
 it on Netlify afterward remains free. Nothing has been deployed yet; everything has been built

@@ -3,7 +3,7 @@ import agent from "../data/agent.json";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/projects", label: "Featured Developments" },
+  { href: "/projects", label: "Developments" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -13,19 +13,19 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 border-b border-primary-100 bg-cream/95 backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
     <a href="/" class="flex flex-col leading-tight">
-      <span class="font-display text-lg font-bold text-primary-700 sm:text-xl">{agent.pageName}</span>
-      <span class="text-xs text-primary-500">with {agent.name}</span>
+      <span class="font-display text-xl font-bold tracking-wide text-primary-700 sm:text-2xl">{agent.pageName}</span>
+      <span class="text-[11px] uppercase tracking-[0.2em] text-accent-600">with {agent.name}</span>
     </a>
 
-    <nav class="hidden items-center gap-6 md:flex">
+    <nav class="hidden items-center gap-5 lg:flex">
       {navLinks.map((link) => (
         <a
           href={link.href}
           class:list={[
-            "text-sm font-medium transition-colors hover:text-primary-700",
-            currentPath === link.href ? "text-primary-700" : "text-ink/70",
+            "whitespace-nowrap text-xs font-semibold uppercase tracking-wider transition-colors hover:text-accent-600",
+            currentPath === link.href ? "text-accent-600" : "text-ink/70",
           ]}
         >
           {link.label}
@@ -35,7 +35,7 @@ const currentPath = Astro.url.pathname;
         href={agent.messengerUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="rounded-full bg-primary-700 px-4 py-2 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+        class="whitespace-nowrap rounded-full bg-accent-500 px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-primary-900 shadow-sm transition-colors hover:bg-accent-400"
       >
         Message on Messenger
       </a>
@@ -46,7 +46,7 @@ const currentPath = Astro.url.pathname;
       type="button"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
-      class="flex h-10 w-10 items-center justify-center rounded-md border border-primary-100 text-primary-700 md:hidden"
+      class="flex h-10 w-10 items-center justify-center rounded-md border border-primary-100 text-primary-700 lg:hidden"
     >
       <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -57,13 +57,13 @@ const currentPath = Astro.url.pathname;
     </button>
   </div>
 
-  <nav id="mobile-menu" class="hidden flex-col gap-1 border-t border-primary-100 bg-cream px-4 pb-4 md:hidden">
+  <nav id="mobile-menu" class="hidden flex-col gap-1 border-t border-primary-100 bg-cream px-4 pb-4 lg:hidden">
     {navLinks.map((link) => (
       <a
         href={link.href}
         class:list={[
-          "rounded-md px-3 py-2 text-base font-medium",
-          currentPath === link.href ? "bg-primary-50 text-primary-700" : "text-ink/80 hover:bg-primary-50",
+          "rounded-md px-3 py-2 text-sm font-semibold uppercase tracking-wide",
+          currentPath === link.href ? "bg-primary-50 text-accent-600" : "text-ink/80 hover:bg-primary-50",
         ]}
       >
         {link.label}
@@ -73,7 +73,7 @@ const currentPath = Astro.url.pathname;
       href={agent.messengerUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="mt-2 rounded-full bg-primary-700 px-4 py-3 text-center text-sm font-semibold text-cream"
+      class="mt-2 rounded-full bg-accent-500 px-4 py-3 text-center text-sm font-semibold uppercase tracking-wide text-primary-900"
     >
       Message on Messenger
     </a>

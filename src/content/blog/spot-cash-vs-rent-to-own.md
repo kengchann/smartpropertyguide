@@ -4,7 +4,7 @@ title: "Spot Cash, Bank Financing, or Rent-to-Own: Choosing the Right Payment Op
 excerpt: "A plain-language look at the most common payment options for pre-selling homes and condos in the Philippines, and how to think about which one fits your situation."
 pubDate: 2026-05-12
 author: "Carolyn Mendoza"
-image: "/images/blog/payment-options-guide.svg"
+image: "/images/blog/payment-options-guide.jpg"
 draft: false
 ---
 

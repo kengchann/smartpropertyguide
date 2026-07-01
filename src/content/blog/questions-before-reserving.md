@@ -4,7 +4,7 @@ title: "5 Questions to Ask Before Reserving a Pre-Selling Unit"
 excerpt: "Reservation fees are usually small, but the commitment behind them isn't. Here are five questions worth asking before you sign anything."
 pubDate: 2026-06-03
 author: "Carolyn Mendoza"
-image: "/images/blog/first-time-buyer-questions.svg"
+image: "/images/blog/first-time-buyer-questions.jpg"
 draft: false
 ---
 

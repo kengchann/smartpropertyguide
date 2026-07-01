@@ -10,7 +10,7 @@ bedrooms: "Studio – 2BR"
 areaLabel: "Floor area: 22–56 sqm"
 paymentTerms: ["Spot Cash", "Rent-to-Own", "Bank Financing"]
 status: "Selling"
-image: "/images/projects/metro-skyline-residences.svg"
+image: "/images/projects/metro-skyline-residences.jpg"
 ---
 
 Sample high-rise condo listing with a rent-to-own option, standing in for a Vista Residences–style project near business districts.

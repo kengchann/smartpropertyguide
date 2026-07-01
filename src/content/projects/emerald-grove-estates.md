@@ -12,7 +12,7 @@ paymentTerms:
   - Bank Financing
   - Pag-IBIG Financing
 status: Selling
-image: /images/projects/emerald-grove-estates.svg
+image: "/images/projects/emerald-grove-estates.jpg"
 isSample: true
 ---
 

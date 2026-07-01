@@ -10,7 +10,7 @@ bedrooms: "3 Bedrooms"
 areaLabel: "Lot area: 72–90 sqm"
 paymentTerms: ["Spot Cash", "Rent-to-Own", "Bank Financing"]
 status: "Limited Units Left"
-image: "/images/projects/willow-park-residences.svg"
+image: "/images/projects/willow-park-residences.jpg"
 ---
 
 Placeholder entry demonstrating a smaller, entry-level house-and-lot option with a rent-to-own path — a common option for first-time buyers.
