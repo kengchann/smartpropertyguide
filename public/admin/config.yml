@@ -21,7 +21,7 @@ collections:
         format: "json"
         fields:
           - { label: "Business / Page Name", name: "pageName", widget: "string" }
-          - { label: "Cover / Header Photo", name: "coverImage", widget: "image", required: false, hint: "Shows behind the homepage headline and at the top of the About page — like a Facebook cover photo. Recommended size 1600x900px or wider." }
+          - { label: "Cover / Header Photo", name: "coverImage", widget: "image", required: false, hint: "Shows at the top of the About page, behind your profile photo — like a Facebook cover photo. Recommended size 1600x900px or wider." }
           - { label: "Profile Photo", name: "profileImage", widget: "image", required: false, hint: "Her headshot — shows as a circle at the top of the About page and a small icon in the site header. Recommended: a square photo." }
           - { label: "Agent Name", name: "name", widget: "string" }
           - { label: "Title", name: "title", widget: "string", hint: "e.g. Assistant Vice President of Sales" }

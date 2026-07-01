@@ -95,11 +95,17 @@ the sample entries once real ones are added.
 `src/data/agent.json` (name, title, bio, contact links, service areas, specialties, and two new
 image fields: `profileImage` and `coverImage`) is wired into Decap CMS as a "files" collection
 called **Site Profile & Settings**. Both image fields default to an empty string, in which case
-the site falls back to a placeholder: an abstract profile icon (About page) and the stock hero
-photo (`hero-villa.jpg`) / arches photo (`about-arches.jpg`) for the cover. Once Carolyn or her
-team uploads real photos through the CMS, they automatically replace the placeholders
-everywhere they're used (homepage hero background, About page cover + circular profile photo,
-small avatar in the site header) — no code changes needed.
+the site falls back to a placeholder: an abstract profile icon and the stock arches photo
+(`about-arches.jpg`) for the cover, both on the About page only. Once Carolyn or her team
+uploads real photos through the CMS, they automatically replace those placeholders on the About
+page cover + circular profile photo, and the small avatar in the site header — no code changes
+needed.
+
+**Note**: the homepage hero background (`hero-villa.jpg`) is intentionally hardcoded and does
+*not* use `coverImage` — her uploaded cover photo is a designed graphic with her name/phone
+baked in (meant for the About page profile context), which looked cluttered stacked under the
+homepage headline. If she wants a custom homepage background later, swap the hardcoded path in
+`src/pages/index.astro` directly.
 
 The About page is now styled like a Facebook profile: a wide cover photo band with a circular
 profile picture overlapping the seam, name/title/bio centered below.

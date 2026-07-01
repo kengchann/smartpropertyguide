@@ -24,22 +24,23 @@ click a button, and it's live.
 
 ## 2. How to Update Your Profile Photo, Cover Photo, and Bio
 
-This is the "make it feel like your Facebook profile" section — one photo behind your name at
-the top of the About page (and the homepage background), and one round profile photo, just like
-a Facebook cover photo + profile picture.
+This is the "make it feel like your Facebook profile" section — one wide cover photo at the top
+of the About page, and one round profile photo, just like a Facebook cover photo + profile
+picture. Your profile photo also shows as a small icon next to the site name in the header on
+every page.
 
 1. From the dashboard, click **Site Profile & Settings** on the left, then click **"Profile &
    Contact Info"**.
 2. To add your **round profile photo**: find the **Profile Photo** box, click **"Choose an
    image"**, and pick a square-ish photo of yourself from your computer.
 3. To add your **cover/header photo**: find the **Cover / Header Photo** box the same way. This
-   one shows wide, so a landscape photo (a nice property photo, an event photo, anything
-   professional) works best.
+   one shows wide at the top of the About page — a landscape photo works best. Note that the
+   homepage keeps its own separate background photo, so this one is just for your About page.
 4. You can also update your **Name, Title, Company, Tagline, Bio, phone, email, WhatsApp/
    Messenger links, years of experience, service areas, and specialties** — all on
    this same page.
 5. When you're done, click **Publish** → **Publish now** at the top.
-6. Give it a couple of minutes (see Section 6), then check the homepage and About page — your
+6. Give it a couple of minutes (see Section 6), then check the About page and site header — your
    new photos and info should be live everywhere they appear on the site.
 
 > 💡 Tip: photos that are too small or blurry will look that way on the live site too — use the
