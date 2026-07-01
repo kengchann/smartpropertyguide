@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AgentPhotoPlaceholder from "../components/AgentPhotoPlaceholder.astro";
+import agent from "../data/agent.json";
+
+const credentials = [
+  { label: "Role", value: `${agent.title}, ${agent.company}` },
+  { label: "License", value: agent.prcLicenseDisplay },
+  { label: "Experience", value: agent.yearsExperienceDisplay },
+  { label: "Focus", value: "Pre-Selling Developments (Not Resale)" },
+];
+---
+
+<Layout
+  title="About Carolyn"
+  description={`Meet ${agent.name}, ${agent.title} at ${agent.company} — pre-selling real estate specialist in the Philippines.`}
+>
+  <!-- Intro -->
+  <section class="bg-gradient-to-b from-primary-50 to-cream">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20">
+      <AgentPhotoPlaceholder class="max-w-sm md:order-2" />
+
+      <div class="md:order-1">
+        <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">About</p>
+        <h1 class="mt-2 font-display text-3xl font-extrabold leading-tight text-primary-700 sm:text-4xl">
+          Meet {agent.name}
+        </h1>
+        <p class="mt-2 text-base font-semibold text-primary-600 sm:text-lg">
+          {agent.title}, {agent.company}
+        </p>
+        <p class="mt-4 text-base text-ink/70 sm:text-lg">{agent.tagline}</p>
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={agent.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-full bg-primary-700 px-6 py-3 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+          >
+            Chat on WhatsApp
+          </a>
+          <a
+            href={agent.messengerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+          >
+            Message on Messenger
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
+    <h2 class="font-display text-2xl font-bold text-primary-700 sm:text-3xl">Her Story</h2>
+    <div class="mt-5 space-y-4 text-sm leading-relaxed text-ink/80 sm:text-base">
+      {agent.bioParagraphs.map((para) => <p>{para}</p>)}
+    </div>
+    <p class="mt-6 rounded-lg border border-dashed border-primary-300 bg-primary-50 px-4 py-2 text-xs text-primary-600">
+      The bio above is placeholder text generated for this demo — replace with Carolyn's real
+      background and story. See NOTES.md.
+    </p>
+  </section>
+
+  <!-- Credentials -->
+  <section class="border-y border-primary-100 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <h2 class="font-display text-2xl font-bold text-primary-700 sm:text-3xl">Credentials</h2>
+      <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {credentials.map((item) => (
+          <div class="rounded-xl border border-primary-100 bg-cream p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-terracotta-500">{item.label}</p>
+            <p class="mt-1 text-sm font-semibold text-primary-700">{item.value}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10">
+        <h3 class="font-display text-lg font-bold text-primary-700">Specialties</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {agent.specialties.map((s) => (
+            <span class="rounded-full bg-primary-50 px-3 py-1.5 text-sm font-medium text-primary-600">{s}</span>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="font-display text-lg font-bold text-primary-700">Service Areas</h3>
+        <div class="mt-3 flex flex-wrap gap-2">
+          {agent.serviceAreas.map((area) => (
+            <span class="rounded-full border border-primary-200 px-3 py-1.5 text-sm font-medium text-primary-700">{area}</span>
+          ))}
+        </div>
+        {agent.serviceAreasIsPlaceholder && (
+          <p class="mt-3 text-xs text-ink/50">Service areas listed are placeholder — confirm with Carolyn before publishing.</p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
+    <h2 class="font-display text-2xl font-bold text-primary-700 sm:text-3xl">
+      Let's Find the Right Development for You
+    </h2>
+    <p class="mx-auto mt-3 max-w-xl text-sm text-ink/70 sm:text-base">
+      Have questions about a specific project or payment option? Reach out directly.
+    </p>
+    <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a
+        href="/projects"
+        class="inline-flex items-center justify-center rounded-full bg-primary-700 px-6 py-3 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+      >
+        View Featured Developments
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+      >
+        Send an Inquiry
+      </a>
+    </div>
+  </section>
+</Layout>

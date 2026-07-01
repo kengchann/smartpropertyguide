@@ -1,0 +1,167 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import AgentPhotoPlaceholder from "../components/AgentPhotoPlaceholder.astro";
+import agent from "../data/agent.json";
+
+const allProjects = await getCollection("projects");
+const featured = allProjects
+  .filter((p) => p.data.status !== "Sold Out")
+  .slice(0, 3)
+  .map((p) => ({ id: p.id, ...p.data }));
+
+const valueProps = [
+  {
+    title: "Vista Land International Premier",
+    desc: "Backed by one of the Philippines' largest real estate groups.",
+  },
+  {
+    title: "Pre-Selling Specialist",
+    desc: "Focused on CrownAsia, Vista Residences & other Vista Land brands.",
+  },
+  {
+    title: agent.prcLicenseDisplay,
+    desc: "Licensed real estate professional you can verify and trust.",
+  },
+  {
+    title: `Serving ${agent.serviceAreas.slice(0, 3).join(", ")} & more`,
+    desc: "Local knowledge across Metro Manila and nearby provinces.",
+  },
+];
+
+const reasons = [
+  {
+    title: "Trusted, Patient Guidance",
+    desc: "No pressure tactics — Carolyn walks families and first-time buyers through every step, from reservation to turnover.",
+  },
+  {
+    title: "Flexible Payment Options",
+    desc: "Spot cash, bank financing, Pag-IBIG, and rent-to-own paths explained clearly so you can choose what fits your budget.",
+  },
+  {
+    title: "Local Market Expertise",
+    desc: "Deep familiarity with Vista Land communities across Metro Manila, Cavite, Laguna, and Quezon City.",
+  },
+];
+---
+
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-primary-50 to-cream">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 md:py-20">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Smart Property Guide</p>
+        <h1 class="mt-3 font-display text-3xl font-extrabold leading-tight text-primary-700 sm:text-4xl md:text-5xl">
+          {agent.tagline}
+        </h1>
+        <p class="mt-4 text-base text-ink/70 sm:text-lg">
+          Hi, I'm <strong>{agent.name}</strong>, {agent.title} at {agent.company}. I help
+          families and first-time buyers find the right pre-selling home or condo across
+          Vista Land's trusted brands — with clear guidance and flexible payment options.
+        </p>
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="/projects"
+            class="inline-flex items-center justify-center rounded-full bg-primary-700 px-6 py-3 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+          >
+            View Featured Developments
+          </a>
+          <a
+            href={agent.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <AgentPhotoPlaceholder class="max-w-sm" />
+    </div>
+  </section>
+
+  <!-- Value props -->
+  <section class="border-y border-primary-100 bg-white">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
+      {valueProps.map((item) => (
+        <div class="text-center sm:text-left">
+          <p class="font-display text-sm font-bold text-primary-700">{item.title}</p>
+          <p class="mt-1 text-xs text-ink/60">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured developments teaser -->
+  <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+    <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Featured Developments</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-primary-700 sm:text-3xl">Explore Vista Land Communities</h2>
+        <p class="mt-2 max-w-xl text-sm text-ink/70">
+          A sample of pre-selling house-and-lot and condominium developments Carolyn currently
+          represents.
+          <em>All entries below are placeholder sample projects — see NOTES.md.</em>
+        </p>
+      </div>
+      <a href="/projects" class="whitespace-nowrap text-sm font-semibold text-primary-700 hover:underline">
+        View All Developments &rarr;
+      </a>
+    </div>
+
+    <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <!-- Why work with Carolyn -->
+  <section class="bg-primary-700 text-cream">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+      <h2 class="font-display text-2xl font-bold sm:text-3xl">Why Work With Carolyn</h2>
+      <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+        {reasons.map((reason) => (
+          <div>
+            <p class="font-display text-lg font-bold text-accent-400">{reason.title}</p>
+            <p class="mt-2 text-sm text-primary-100">{reason.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
+    <h2 class="font-display text-2xl font-bold text-primary-700 sm:text-3xl">
+      Ready to Find Your Next Home or Investment?
+    </h2>
+    <p class="mx-auto mt-3 max-w-xl text-sm text-ink/70 sm:text-base">
+      Message Carolyn directly — she typically replies within the day.
+    </p>
+    <div class="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a
+        href={agent.messengerUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-full bg-primary-700 px-6 py-3 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+      >
+        Message on Messenger
+      </a>
+      <a
+        href={agent.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+      >
+        Chat on WhatsApp
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+      >
+        Send an Inquiry
+      </a>
+    </div>
+  </section>
+</Layout>

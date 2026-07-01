@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import agent from "../../data/agent.json";
+---
+
+<Layout title="Thank You" description="Thank you for your inquiry.">
+  <section class="mx-auto flex max-w-2xl flex-col items-center px-4 py-24 text-center sm:px-6">
+    <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Message Sent</p>
+    <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">Thank You!</h1>
+    <p class="mt-4 text-sm text-ink/70 sm:text-base">
+      Your inquiry has been received. {agent.name} typically replies within the day — for a
+      faster response, feel free to message directly on Messenger or WhatsApp too.
+    </p>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a
+        href={agent.whatsappUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center rounded-full bg-primary-700 px-6 py-3 text-sm font-semibold text-cream shadow-sm transition-colors hover:bg-primary-600"
+      >
+        Chat on WhatsApp
+      </a>
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-full border border-primary-700 px-6 py-3 text-sm font-semibold text-primary-700 transition-colors hover:bg-primary-700 hover:text-cream"
+      >
+        Back to Home
+      </a>
+    </div>
+  </section>
+</Layout>

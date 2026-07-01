@@ -1,0 +1,18 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  phase: string;
+}
+
+const { eyebrow, title, phase } = Astro.props;
+---
+
+<section class="mx-auto flex max-w-3xl flex-col items-center px-4 py-24 text-center sm:px-6">
+  <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">{eyebrow}</p>
+  <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">{title}</h1>
+  <p class="mt-4 rounded-xl border border-dashed border-primary-300 bg-primary-50 px-5 py-3 text-sm text-primary-600">
+    This page is being built in {phase}. Check back soon!
+  </p>
+  <a href="/" class="mt-6 text-sm font-semibold text-primary-700 hover:underline">&larr; Back to Home</a>
+</section>

@@ -1,0 +1,58 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "projects"
+    label: "Featured Developments"
+    label_singular: "Development"
+    description: "The house-and-lot and condo developments shown on the Featured Developments page."
+    folder: "src/content/projects"
+    create: true
+    delete: true
+    slug: "{{fields.name}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{name}} — {{status}}"
+    fields:
+      - { label: "Project Name", name: "name", widget: "string", hint: "e.g. Emerald Grove Estates" }
+      - { label: "Brand / Community Tag", name: "brandTag", widget: "string", hint: "e.g. House & Lot Community (Sample)" }
+      - { label: "Development Type", name: "type", widget: "select", options: ["House & Lot", "Condominium"] }
+      - { label: "Location", name: "location", widget: "string", hint: "e.g. Bacoor, Cavite" }
+      - { label: "Starting Price — numbers only", name: "priceFrom", widget: "number", value_type: "int", hint: "Used for sorting only, e.g. 4500000" }
+      - { label: "Starting Price — shown on site", name: "priceLabel", widget: "string", hint: "e.g. From ₱4,500,000" }
+      - { label: "Bedrooms / Layout", name: "bedrooms", widget: "string", hint: "e.g. 3–4 Bedrooms or Studio – 2BR" }
+      - { label: "Floor / Lot Area", name: "areaLabel", widget: "string", hint: "e.g. Lot area: 90–120 sqm" }
+      - { label: "Payment Terms", name: "paymentTerms", widget: "list", hint: "Add one per line, e.g. Spot Cash, Bank Financing, Rent-to-Own" }
+      - { label: "Status", name: "status", widget: "select", options: ["Selling", "Limited Units Left", "Sold Out"] }
+      - { label: "Main Photo", name: "image", widget: "image", hint: "Upload a real photo — recommended size 1200x750px (16:10)" }
+      - { label: "Description", name: "body", widget: "markdown", hint: "A few sentences about this development." }
+      - { label: "This is placeholder/sample content", name: "isSample", widget: "boolean", default: false, required: false, hint: "Leave unchecked for real projects" }
+
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Post"
+    description: "Articles shown on the Blog page."
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    slug: "{{fields.title}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short Excerpt", name: "excerpt", widget: "text", hint: "1-2 sentences shown on the blog listing page" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Carolyn Mendoza" }
+      - { label: "Cover Photo", name: "image", widget: "image", hint: "Recommended size 1200x675px (16:9)" }
+      - { label: "Save as Draft (hide from site)", name: "draft", widget: "boolean", default: false }
+      - { label: "Post Content", name: "body", widget: "markdown" }
+      - { label: "This is placeholder/sample content", name: "isSample", widget: "boolean", default: false, required: false, hint: "Leave unchecked for real posts" }

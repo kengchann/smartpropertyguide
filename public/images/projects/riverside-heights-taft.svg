@@ -1,0 +1,23 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3d7a8c"/>
+      <stop offset="100%" stop-color="#1e404a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg5)"/>
+  <rect x="0" y="380" width="800" height="120" fill="#132a30" opacity="0.6"/>
+  <g fill="#e8b86d" opacity="0.9">
+    <rect x="300" y="120" width="100" height="260" fill="#4a8fa3"/>
+    <rect x="410" y="160" width="90" height="220" fill="#5aa0b4"/>
+    <g fill="#f4ede1" opacity="0.85">
+      <rect x="315" y="140" width="14" height="14"/><rect x="339" y="140" width="14" height="14"/><rect x="363" y="140" width="14" height="14"/>
+      <rect x="315" y="170" width="14" height="14"/><rect x="339" y="170" width="14" height="14"/><rect x="363" y="170" width="14" height="14"/>
+      <rect x="315" y="200" width="14" height="14"/><rect x="339" y="200" width="14" height="14"/><rect x="363" y="200" width="14" height="14"/>
+      <rect x="425" y="180" width="14" height="14"/><rect x="449" y="180" width="14" height="14"/><rect x="473" y="180" width="14" height="14"/>
+      <rect x="425" y="210" width="14" height="14"/><rect x="449" y="210" width="14" height="14"/><rect x="473" y="210" width="14" height="14"/>
+    </g>
+  </g>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Riverside Heights Taft</text>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" letter-spacing="2" fill="#e8b86d" text-anchor="middle">SAMPLE PLACEHOLDER IMAGE — CONDOMINIUM</text>
+</svg>

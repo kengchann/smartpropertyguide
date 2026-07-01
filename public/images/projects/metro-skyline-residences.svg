@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#274b6d"/>
+      <stop offset="100%" stop-color="#122439"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg4)"/>
+  <rect x="0" y="380" width="800" height="120" fill="#0c1a29" opacity="0.6"/>
+  <g fill="#e8b86d" opacity="0.9">
+    <rect x="260" y="140" width="90" height="240" fill="#3a6f97"/>
+    <rect x="360" y="90" width="110" height="290" fill="#4a83ad"/>
+    <rect x="480" y="160" width="80" height="220" fill="#3a6f97"/>
+    <g fill="#f4ede1" opacity="0.85">
+      <rect x="272" y="160" width="14" height="14"/><rect x="296" y="160" width="14" height="14"/><rect x="320" y="160" width="14" height="14"/>
+      <rect x="272" y="190" width="14" height="14"/><rect x="296" y="190" width="14" height="14"/><rect x="320" y="190" width="14" height="14"/>
+      <rect x="380" y="115" width="14" height="14"/><rect x="404" y="115" width="14" height="14"/><rect x="428" y="115" width="14" height="14"/><rect x="452" y="115" width="14" height="14"/>
+      <rect x="380" y="145" width="14" height="14"/><rect x="404" y="145" width="14" height="14"/><rect x="428" y="145" width="14" height="14"/><rect x="452" y="145" width="14" height="14"/>
+      <rect x="380" y="175" width="14" height="14"/><rect x="404" y="175" width="14" height="14"/><rect x="428" y="175" width="14" height="14"/><rect x="452" y="175" width="14" height="14"/>
+      <rect x="494" y="180" width="14" height="14"/><rect x="518" y="180" width="14" height="14"/><rect x="542" y="180" width="14" height="14"/>
+      <rect x="494" y="210" width="14" height="14"/><rect x="518" y="210" width="14" height="14"/><rect x="542" y="210" width="14" height="14"/>
+    </g>
+  </g>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff" text-anchor="middle">Metro Skyline Residences</text>
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" letter-spacing="2" fill="#e8b86d" text-anchor="middle">SAMPLE PLACEHOLDER IMAGE — CONDOMINIUM</text>
+</svg>
