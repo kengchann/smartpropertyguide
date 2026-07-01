@@ -4,7 +4,6 @@ import agent from "../data/agent.json";
 
 const credentials = [
   { label: "Role", value: `${agent.title}, ${agent.company}` },
-  { label: "License", value: agent.prcLicenseDisplay },
   { label: "Experience", value: agent.yearsExperienceDisplay },
   { label: "Focus", value: "Pre-Selling Developments (Not Resale)" },
 ];
@@ -89,7 +88,7 @@ const coverImage = agent.coverImage || "/images/site/about-arches.jpg";
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">Credentials</p>
       <h2 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">Why You Can Trust Her</h2>
-      <div class="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-primary-100 bg-primary-100 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-8 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-primary-100 bg-primary-100 sm:grid-cols-3">
         {credentials.map((item) => (
           <div class="bg-white p-6">
             <p class="text-[11px] font-semibold uppercase tracking-wider text-accent-600">{item.label}</p>

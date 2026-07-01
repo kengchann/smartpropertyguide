@@ -35,7 +35,6 @@ collections:
           - { label: "Messenger Link", name: "messengerUrl", widget: "string", hint: "e.g. https://m.me/YourPageName" }
           - { label: "Instagram Handle (as shown on site)", name: "instagramHandle", widget: "string" }
           - { label: "Instagram Link", name: "instagramUrl", widget: "string" }
-          - { label: "PRC License (as shown on site)", name: "prcLicenseDisplay", widget: "string" }
           - { label: "Years of Experience (as shown on site)", name: "yearsExperienceDisplay", widget: "string" }
           - { label: "Service Areas", name: "serviceAreas", widget: "list", hint: "Add one area per line, e.g. Metro Manila" }
           - { label: "Specialties", name: "specialties", widget: "list", hint: "Add one per line" }

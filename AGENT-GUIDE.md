@@ -36,7 +36,7 @@ a Facebook cover photo + profile picture.
    one shows wide, so a landscape photo (a nice property photo, an event photo, anything
    professional) works best.
 4. You can also update your **Name, Title, Company, Tagline, Bio, phone, email, WhatsApp/
-   Messenger links, PRC license, years of experience, service areas, and specialties** — all on
+   Messenger links, years of experience, service areas, and specialties** — all on
    this same page.
 5. When you're done, click **Publish** → **Publish now** at the top.
 6. Give it a couple of minutes (see Section 6), then check the homepage and About page — your

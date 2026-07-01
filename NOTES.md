@@ -15,19 +15,26 @@ Stored in [`src/data/agent.json`](src/data/agent.json):
 - WhatsApp link (built from phone number): https://wa.me/639279180332
 - Instagram handle: @yourrealtor.carolyn
 
-## ⚠️ Placeholder fields that need her real info
+## ⚠️ Placeholder fields that still need real info
 
-All in [`src/data/agent.json`](src/data/agent.json) — flagged with an `IsPlaceholder` field:
+All in [`src/data/agent.json`](src/data/agent.json) — editable directly through the CMS under
+**Site Profile & Settings** (see AGENT-GUIDE.md Section 2), no code changes needed:
 
 | Field | Current placeholder | What's needed |
 |---|---|---|
-| `messengerUrl` | `https://m.me/yourrealtor.carolyn` | Her real Facebook Page username (the `m.me/...` link only works if this matches her actual FB Page, not a personal profile) |
-| `prcLicenseDisplay` | "PRC License No. 0000000 (placeholder)" | Her real PRC license number |
 | `serviceAreas` | Metro Manila, Cavite, Laguna, Quezon City | Confirm/adjust to areas she actually serves |
-| Agent photo | Gray silhouette placeholder box on homepage hero + About page | Her real headshot — one photo, used in both places via `src/components/AgentPhotoPlaceholder.astro` |
+| `profileImage` / `coverImage` | Empty — site falls back to an icon placeholder / stock photos | Her real headshot + a cover photo, uploaded via the CMS |
 | `yearsExperienceDisplay` | "X+ Years in Real Estate (placeholder)" | Her actual years of experience |
 | `bioParagraphs` | 3 AI-generated placeholder paragraphs (About page "Her Story" section) | Her real background/story — see note below |
 | `specialties` | Pre-Selling House & Lot, Condo/High-Rise, Rent-to-Own Guidance, First-Time Buyer Support | Confirm these match what she actually focuses on |
+
+**PRC license number**: removed from the site entirely for now (was showing an obviously fake
+placeholder number on the live About page and homepage) — add it back once she has a real
+number to disclose, in both `src/pages/about.astro` (`credentials` array) and
+`src/pages/index.astro` (`valueProps` array), plus re-add the `prcLicenseDisplay` field to
+`agent.json` and `public/admin/config.yml`.
+
+**`messengerUrl`**: confirmed real — `https://m.me/SmartPropertyGuidee`.
 
 **About page bio**: `agent.bioParagraphs` in `agent.json` is entirely AI-generated placeholder
 text (flagged `bioIsPlaceholder: true`). It does not reflect her actual career history — replace
