@@ -1,16 +1,19 @@
 ---
+name: Hawthorne Heights
+brandTag: Condominium/ High-Rise
+type: Condominium
+location: 267 Katipunan Avenue, Barangay Loyola Heights, Quezon City
+priceFrom: 6295343
+priceLabel: From ₱6,295,343
+bedrooms: Studio-1 Bedroom
+areaLabel: 21sqm
+paymentTerms:
+  - Spot Cash
+  - Rent-to-Own
+  - Bank Financing
+status: Limited Units Left
+image: /images/uploads/image-11.jpeg
 isSample: true
-name: "Willow Park Residences"
-brandTag: "House & Lot Community (Sample)"
-type: "House & Lot"
-location: "Placeholder location — Cavite"
-priceFrom: 3900000
-priceLabel: "From ₱3,900,000"
-bedrooms: "3 Bedrooms"
-areaLabel: "Lot area: 72–90 sqm"
-paymentTerms: ["Spot Cash", "Rent-to-Own", "Bank Financing"]
-status: "Limited Units Left"
-image: "/images/projects/willow-park-residences.jpg"
 ---
 
 Placeholder entry demonstrating a smaller, entry-level house-and-lot option with a rent-to-own path — a common option for first-time buyers.
