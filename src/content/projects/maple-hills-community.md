@@ -5,7 +5,7 @@ type: Condominium
 location: Boracay
 priceFrom: 28792000
 priceLabel: From ₱28,792,000
-bedrooms: "0"
+bedrooms: Studio
 areaLabel: "Floor area: 50.61 sqm"
 paymentTerms:
   - Spot Cash
