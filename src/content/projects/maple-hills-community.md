@@ -6,7 +6,7 @@ location: Station Zero, Boracay, Aklan
 priceFrom: 28792000
 priceLabel: From ₱28,792,000
 bedrooms: Studio-1 Bedroom
-areaLabel: "Floor area: 50.61 sqm"
+areaLabel: 50.61 sqm
 paymentTerms:
   - Spot Cash
   - Bank Financing
