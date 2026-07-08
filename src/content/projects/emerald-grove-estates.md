@@ -1,19 +1,18 @@
 ---
-name: Emerald Grove Estates
-brandTag: House & Lot Community (Sample)
-type: House & Lot
-location: Placeholder location — Cavite
-priceFrom: 4500000
-priceLabel: "From ₱4,500,000"
-bedrooms: 3–4 Bedrooms
-areaLabel: "Lot area: 90–120 sqm"
+name: Novus Prime Residences
+brandTag: Condominium
+type: Condominium
+location: Villar City, Dasmariñas
+priceFrom: 7457000
+priceLabel: "7457000"
+bedrooms: Studio
+areaLabel: 24sqm
 paymentTerms:
   - Spot Cash
   - Bank Financing
-  - Pag-IBIG Financing
+  - Pre-sellingterms
 status: Selling
-image: "/images/projects/emerald-grove-estates.jpg"
+image: /images/uploads/image-6.jpeg
 isSample: true
 ---
-
-A quiet, gated house-and-lot community placeholder — generic sample copy standing in for a real CrownAsia-style development. Replace with the actual project name, renders, and specs Carolyn is licensed to market.
+**Novus Prime Residences** – A modern condominium in **Villar City, Dasmariñas, Cavite**, just walking distance to **UP Dasmariñas** and near **DLSU-D**, malls, hospitals, and other key establishments. Perfect for investment, rental income, or Airbnb.
