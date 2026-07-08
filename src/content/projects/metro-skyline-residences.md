@@ -2,7 +2,7 @@
 name: Pontevedra Estate
 brandTag: House and lot
 type: House & Lot
-location: Placeholder location — Sea. Rosa, Laguna
+location: " Sta. Rosa, Laguna"
 priceFrom: 8127200
 priceLabel: From ₱8,127,200
 bedrooms: Studio – 2BR
