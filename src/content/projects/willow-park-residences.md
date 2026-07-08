@@ -15,5 +15,4 @@ status: Limited Units Left
 image: /images/uploads/image-11.jpeg
 isSample: true
 ---
-
-Placeholder entry demonstrating a smaller, entry-level house-and-lot option with a rent-to-own path — a common option for first-time buyers.
+**Hawthorne Heights** is a modern condominium development by Vista Residences located along Katipunan Avenue, Quezon City. Its prime location near top universities, business districts, and transportation hubs makes it an excellent choice for students, professionals, and investors.
