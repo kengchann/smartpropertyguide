@@ -4,7 +4,7 @@ brandTag: Condominium
 type: Condominium
 location: Villar City, Dasmariñas
 priceFrom: 7457000
-priceLabel: "7457000"
+priceLabel: From ₱7,457,000
 bedrooms: Studio
 areaLabel: 24sqm
 paymentTerms:
