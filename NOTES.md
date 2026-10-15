@@ -25,7 +25,7 @@ All in [`src/data/agent.json`](src/data/agent.json) — editable directly throug
 | `serviceAreas` | Metro Manila, Cavite, Laguna, Quezon City | Confirm/adjust to areas she actually serves |
 | `profileImage` / `coverImage` | Empty — site falls back to an icon placeholder / stock photos | Her real headshot + a cover photo, uploaded via the CMS |
 | `yearsExperienceDisplay` | "X+ Years in Real Estate (placeholder)" | Her actual years of experience |
-| `bioParagraphs` | 3 AI-generated placeholder paragraphs (About page "Her Story" section) | Her real background/story — see note below |
+| `bio` | Real bio written by her (single text field, blank line = new paragraph) | Keep up to date |
 | `specialties` | Pre-Selling House & Lot, Condo/High-Rise, Rent-to-Own Guidance, First-Time Buyer Support | Confirm these match what she actually focuses on |
 
 **PRC license number**: removed from the site entirely for now (was showing an obviously fake
@@ -36,10 +36,11 @@ number to disclose, in both `src/pages/about.astro` (`credentials` array) and
 
 **`messengerUrl`**: confirmed real — `https://m.me/SmartPropertyGuidee`.
 
-**About page bio**: `agent.bioParagraphs` in `agent.json` is entirely AI-generated placeholder
-text (flagged `bioIsPlaceholder: true`). It does not reflect her actual career history — replace
-it with her real story before launch. The About page also shows a small on-page disclaimer next
-to the bio as a safety net in case this gets missed.
+**Editable homepage + page text**: homepage copy/photo lives in `src/data/home.json`, and
+Developments/Blog page text, footer note and SEO description live in `src/data/pages.json`.
+Both are edited in the CMS (Site Profile & Settings → Homepage / Other Page Text & Footer).
+No developer brand names (e.g. Vista Land) are hardcoded in templates anymore. The bio was
+switched from a list widget to a text field because the list widget split on commas.
 
 ## 🏗️ Sample "Featured Developments" — 100% fictional, for layout/demo only
 

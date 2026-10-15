@@ -36,11 +36,11 @@ every page.
 3. To add your **cover/header photo**: find the **Cover / Header Photo** box the same way. This
    one shows wide at the top of the About page — a landscape photo works best. Note that the
    homepage keeps its own separate background photo, so this one is just for your About page.
-4. You can also update your **Name, Title, Company, Tagline, Bio, phone, email, WhatsApp/
+4. You can also update your **Name, Title, Company, Tagline, Bio (leave a blank line between paragraphs), phone, email, WhatsApp/
    Messenger links, years of experience, service areas, and specialties** — all on
    this same page.
 5. When you're done, click **Publish** → **Publish now** at the top.
-6. Give it a couple of minutes (see Section 6), then check the About page and site header — your
+6. Give it a couple of minutes (see Section 7), then check the About page and site header — your
    new photos and info should be live everywhere they appear on the site.
 
 > 💡 Tip: photos that are too small or blurry will look that way on the live site too — use the
@@ -48,7 +48,31 @@ every page.
 
 ---
 
-## 3. How to Add a New Featured Development
+## 3. How to Change the Homepage (Photo, Headline, Text)
+
+Everything on the homepage can be changed here — the big background photo, the headline, the
+intro, the three highlights under the photo, the "Why Work With Me" reasons, and the bottom
+message.
+
+1. From the dashboard, click **Site Profile & Settings**, then click **"Homepage"**.
+2. To change the **big background photo**: click **Homepage Background Photo** → **"Choose an
+   image"**. Use a wide (landscape) photo with no writing on it, because the headline sits on
+   top. Leave it empty to keep the default stock photo.
+3. Change the **Main Headline**, **Intro Paragraph**, button names, and the text boxes below
+   them — just click and type.
+4. The **Three Highlights** and **Reasons** are lists. Click an item to edit it, or use the
+   small arrows to reorder. Three items fit best.
+5. Click **Publish** → **Publish now**.
+
+The **Developments page text, Blog page text, footer small print, and the description Google
+shows** are under **Site Profile & Settings → "Other Page Text & Footer"**.
+
+> 💡 Tip: your name, title, company, phone and links are changed in **"Profile & Contact Info"**
+> (Section 2), not here.
+
+---
+
+## 4. How to Add a New Featured Development
 
 1. From the dashboard, click **Featured Developments** on the left.
 2. Click the green **"+ Development"** button near the top.
@@ -73,11 +97,11 @@ every page.
    once it's uploaded.
 5. When everything looks right, click the green **Publish** button in the top-right, then
    **Publish now**.
-6. That's it — the new development is live (see timing note in Section 6).
+6. That's it — the new development is live (see timing note in Section 7).
 
 ---
 
-## 4. How to Edit or Remove a Development (e.g. Mark as "Sold Out")
+## 5. How to Edit or Remove a Development (e.g. Mark as "Sold Out")
 
 **To edit (e.g. mark a project Sold Out):**
 1. Click **Featured Developments**, then click on the project you want to change.
@@ -94,7 +118,7 @@ every page.
 
 ---
 
-## 5. How to Write and Publish a Blog Post
+## 6. How to Write and Publish a Blog Post
 
 1. From the dashboard, click **Blog Posts** on the left.
 2. Click **"+ Post"**.
@@ -112,7 +136,7 @@ every page.
 
 ---
 
-## 6. How Long Until Changes Show Up on the Website?
+## 7. How Long Until Changes Show Up on the Website?
 
 After you click **Publish**, the website automatically rebuilds itself. This usually takes
 **1–3 minutes**. If you refresh the live website right after publishing and don't see your
@@ -120,7 +144,7 @@ change yet, that's completely normal — just wait a couple of minutes and refre
 
 ---
 
-## 7. Something Looks Broken vs. What's Normal
+## 8. Something Looks Broken vs. What's Normal
 
 **This is normal, don't worry:**
 - The site takes a minute or two to update after you click Publish.

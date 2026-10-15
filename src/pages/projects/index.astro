@@ -2,31 +2,36 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
+import pages from "../../data/pages.json";
+import agent from "../../data/agent.json";
 
 const collection = await getCollection("projects");
 const allProjects = collection.map((p) => ({ id: p.id, ...p.data }));
 
+const hasSample = allProjects.some((p) => p.isSample);
 const filters = ["All", "House & Lot", "Condominium"];
 ---
 
 <Layout
   title="Featured Developments"
-  description="Explore pre-selling house-and-lot and condominium developments across Vista Land brands, represented by Carolyn Mendoza."
+  description={`Explore pre-selling house-and-lot and condominium developments with ${agent.name}.`}
 >
   <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
     <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Featured Developments</p>
     <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">
-      Pre-Selling Developments Across Vista Land Brands
+      {pages.projectsHeading}
     </h1>
-    <p class="mt-4 max-w-2xl text-sm text-ink/70 sm:text-base">
-      These are current pre-selling developments Carolyn represents as a sales partner under
-      Vista Land International Premier — house-and-lot communities and condominium/high-rise
-      projects across CrownAsia, Vista Residences, and other Vista Land brands. This is not a
-      resale listings page.
-    </p>
-    <p class="mt-3 max-w-2xl rounded-lg border border-dashed border-primary-300 bg-primary-50 px-4 py-2 text-xs text-primary-600">
-      Every project below is a fictional sample used for layout purposes — see NOTES.md in the project files for what to replace with real developments.
-    </p>
+    <p class="mt-4 max-w-2xl text-sm text-ink/70 sm:text-base">{pages.projectsIntro}</p>
+    {hasSample && (
+      <p class="mt-3 max-w-2xl rounded-lg border border-dashed border-primary-300 bg-primary-50 px-4 py-2 text-xs text-primary-600">
+        Some projects below are sample placeholders and will be replaced with real developments.
+      </p>
+    )}
+    {allProjects.length === 0 && (
+      <p class="mt-8 max-w-2xl rounded-lg border border-primary-100 bg-white px-6 py-8 text-sm text-ink/70">
+        New developments are being added. Message Carolyn for current availability.
+      </p>
+    )}
 
     <div class="mt-8 flex flex-wrap gap-2" id="filter-tabs">
       {filters.map((f, i) => (

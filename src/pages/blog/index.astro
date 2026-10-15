@@ -1,12 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import pages from "../../data/pages.json";
 
 const collection = await getCollection("blog", ({ data }) => !data.draft);
 const posts = collection
   .map((p) => ({ id: p.id, ...p.data }))
   .sort((a, b) => b.pubDate.valueOf() - a.pubDate.valueOf());
 
+const hasSample = posts.some((p) => p.isSample);
 const dateFormatter = new Intl.DateTimeFormat("en-PH", { year: "numeric", month: "long", day: "numeric" });
 ---
 
@@ -16,14 +18,13 @@ const dateFormatter = new Intl.DateTimeFormat("en-PH", { year: "numeric", month:
 >
   <section class="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-16">
     <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Blog</p>
-    <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">Local Market Insights</h1>
-    <p class="mt-4 max-w-2xl text-sm text-ink/70 sm:text-base">
-      Practical guides on buying, financing, and navigating pre-selling developments in the
-      Philippines.
-    </p>
-    <p class="mt-3 max-w-2xl rounded-lg border border-dashed border-primary-300 bg-primary-50 px-4 py-2 text-xs text-primary-600">
-      The posts below are sample content written for this demo site — see NOTES.md.
-    </p>
+    <h1 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">{pages.blogHeading}</h1>
+    <p class="mt-4 max-w-2xl text-sm text-ink/70 sm:text-base">{pages.blogIntro}</p>
+    {hasSample && (
+      <p class="mt-3 max-w-2xl rounded-lg border border-dashed border-primary-300 bg-primary-50 px-4 py-2 text-xs text-primary-600">
+        Some posts below are sample content.
+      </p>
+    )}
 
     <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
       {posts.map((post) => (

@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import agent from "../data/agent.json";
+import home from "../data/home.json";
 
 const allProjects = await getCollection("projects");
 const featured = allProjects
@@ -10,67 +11,38 @@ const featured = allProjects
   .slice(0, 3)
   .map((p) => ({ id: p.id, ...p.data }));
 
-const valueProps = [
-  {
-    title: "Vista Land International Premier",
-    desc: "Backed by one of the Philippines' largest real estate groups.",
-  },
-  {
-    title: "Pre-Selling Specialist",
-    desc: "Focused on CrownAsia, Vista Residences & other Vista Land brands.",
-  },
-  {
-    title: `Serving ${agent.serviceAreas.slice(0, 3).join(", ")} & more`,
-    desc: "Local knowledge across Metro Manila and nearby provinces.",
-  },
-];
-
-const reasons = [
-  {
-    title: "Trusted, Patient Guidance",
-    desc: "No pressure tactics — Carolyn walks families and first-time buyers through every step, from reservation to turnover.",
-  },
-  {
-    title: "Flexible Payment Options",
-    desc: "Spot cash, bank financing, Pag-IBIG, and rent-to-own paths explained clearly so you can choose what fits your budget.",
-  },
-  {
-    title: "Local Market Expertise",
-    desc: "Deep familiarity with Vista Land communities across Metro Manila, Cavite, Laguna, and Quezon City.",
-  },
-];
+const heroImage = home.heroImage || "/images/site/hero-villa.jpg";
+const hasSampleProjects = featured.some((p) => p.isSample);
 ---
 
 <Layout title="Home">
   <!-- Hero -->
   <section class="relative flex min-h-[85vh] items-center overflow-hidden bg-primary-900">
     <img
-      src="/images/site/hero-villa.jpg"
+      src={heroImage}
       alt=""
       class="absolute inset-0 h-full w-full object-cover opacity-70"
       fetchpriority="high"
     />
     <div class="absolute inset-0 bg-gradient-to-t from-primary-900 via-primary-900/70 to-primary-900/20"></div>
-    <span class="absolute bottom-4 right-4 z-10 rounded-sm bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-white/70">
-      Sample Photo
-    </span>
+    {!home.heroImage && (
+      <span class="absolute bottom-4 right-4 z-10 rounded-sm bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-white/70">
+        Sample Photo
+      </span>
+    )}
 
     <div class="relative z-10 mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
-      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent-400">Smart Property Guide</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-accent-400">{home.heroEyebrow}</p>
       <h1 class="mt-5 max-w-3xl font-display text-4xl font-bold leading-tight text-cream sm:text-5xl md:text-6xl">
-        {agent.tagline}
+        {home.heroHeading}
       </h1>
-      <p class="mt-6 max-w-xl text-base text-cream/80 sm:text-lg">
-        Hi, I'm <strong class="text-cream">{agent.name}</strong>, {agent.title} at {agent.company}. I
-        help families and first-time buyers find the right pre-selling home or condo across
-        Vista Land's trusted brands — with clear guidance and flexible payment options.
-      </p>
+      <p class="mt-6 max-w-xl text-base text-cream/80 sm:text-lg">{home.heroIntro}</p>
       <div class="mt-9 flex flex-col gap-4 sm:flex-row">
         <a
           href="/projects"
           class="inline-flex items-center justify-center rounded-sm bg-accent-500 px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-primary-900 shadow-lg transition-colors hover:bg-accent-400"
         >
-          View Featured Developments
+          {home.heroPrimaryButton}
         </a>
         <a
           href={agent.whatsappUrl}
@@ -78,7 +50,7 @@ const reasons = [
           rel="noopener noreferrer"
           class="inline-flex items-center justify-center rounded-sm border border-cream/40 px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-cream transition-colors hover:border-cream hover:bg-cream/10"
         >
-          Chat on WhatsApp
+          {home.heroSecondaryButton}
         </a>
       </div>
     </div>
@@ -87,7 +59,7 @@ const reasons = [
   <!-- Value props -->
   <section class="border-b border-primary-100 bg-white">
     <div class="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 py-12 sm:grid-cols-3 sm:px-6">
-      {valueProps.map((item) => (
+      {home.valueProps.map((item) => (
         <div class="text-center sm:text-left">
           <p class="font-display text-base font-bold text-primary-700">{item.title}</p>
           <p class="mt-1.5 text-xs text-ink/60">{item.desc}</p>
@@ -100,12 +72,11 @@ const reasons = [
   <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
     <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
       <div>
-        <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">Featured Developments</p>
-        <h2 class="mt-2 font-display text-2xl font-bold text-primary-700 sm:text-3xl">Explore Vista Land Communities</h2>
+        <p class="text-sm font-semibold uppercase tracking-wide text-terracotta-500">{home.featuredEyebrow}</p>
+        <h2 class="mt-2 font-display text-2xl font-bold text-primary-700 sm:text-3xl">{home.featuredHeading}</h2>
         <p class="mt-2 max-w-xl text-sm text-ink/70">
-          A sample of pre-selling house-and-lot and condominium developments Carolyn currently
-          represents.
-          <em>All entries below are placeholder sample projects — see NOTES.md.</em>
+          {home.featuredIntro}
+          {hasSampleProjects && <em> Some entries below are sample placeholder projects.</em>}
         </p>
       </div>
       <a href="/projects" class="whitespace-nowrap text-sm font-semibold text-primary-700 hover:underline">
@@ -116,14 +87,19 @@ const reasons = [
     <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {featured.map((project) => <ProjectCard project={project} />)}
     </div>
+    {featured.length === 0 && (
+      <p class="mt-8 rounded-lg border border-primary-100 bg-white px-6 py-8 text-sm text-ink/70">
+        New developments are being added. Message Carolyn for current availability.
+      </p>
+    )}
   </section>
 
   <!-- Why work with Carolyn -->
   <section class="bg-primary-700 text-cream">
     <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-      <h2 class="font-display text-2xl font-bold sm:text-3xl">Why Work With Carolyn</h2>
+      <h2 class="font-display text-2xl font-bold sm:text-3xl">{home.reasonsHeading}</h2>
       <div class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
-        {reasons.map((reason) => (
+        {home.reasons.map((reason) => (
           <div>
             <p class="font-display text-lg font-bold text-accent-400">{reason.title}</p>
             <p class="mt-2 text-sm text-primary-100">{reason.desc}</p>
@@ -136,10 +112,10 @@ const reasons = [
   <!-- CTA banner -->
   <section class="mx-auto max-w-6xl px-4 py-16 text-center sm:px-6">
     <h2 class="font-display text-2xl font-bold text-primary-700 sm:text-3xl">
-      Ready to Find Your Next Home or Investment?
+      {home.ctaHeading}
     </h2>
     <p class="mx-auto mt-3 max-w-xl text-sm text-ink/70 sm:text-base">
-      Message Carolyn directly — she typically replies within the day.
+      {home.ctaText}
     </p>
     <div class="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
       <a

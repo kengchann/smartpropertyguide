@@ -1,5 +1,6 @@
 ---
 import agent from "../data/agent.json";
+import pages from "../data/pages.json";
 
 const year = new Date().getFullYear();
 ---
@@ -35,12 +36,7 @@ const year = new Date().getFullYear();
   </div>
 
   <div class="border-t border-primary-700 px-4 py-6 text-center text-xs text-primary-300 sm:px-6">
-    <p>
-      {agent.name} markets pre-selling developments under Vista Land International Premier
-      (CrownAsia, Vista Residences, and other Vista Land brands). Project names, photos, and
-      pricing shown as "sample" on this site are placeholders and do not represent actual
-      developer listings.
-    </p>
+    {pages.footerNote && <p>{pages.footerNote}</p>}
     <p class="mt-2">&copy; {year} {agent.pageName}. All rights reserved.</p>
   </div>
 </footer>

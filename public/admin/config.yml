@@ -26,8 +26,8 @@ collections:
           - { label: "Agent Name", name: "name", widget: "string" }
           - { label: "Title", name: "title", widget: "string", hint: "e.g. Assistant Vice President of Sales" }
           - { label: "Company", name: "company", widget: "string" }
-          - { label: "Tagline", name: "tagline", widget: "string", hint: "Shows big on the homepage headline" }
-          - { label: "Bio Paragraphs", name: "bioParagraphs", widget: "list", hint: "Add one paragraph per line — shown on the About page under 'Her Story'" }
+          - { label: "Tagline", name: "tagline", widget: "string", hint: "Short line shown under your name on the About page" }
+          - { label: "Bio / Her Story", name: "bio", widget: "text", hint: "Shown on the About page. Leave a blank line between paragraphs to start a new paragraph. Commas are fine." }
           - { label: "Phone (as shown on site)", name: "phoneDisplay", widget: "string", hint: "e.g. 0927 918 0332" }
           - { label: "Phone (international format, for links)", name: "phoneIntl", widget: "string", hint: "e.g. +639279180332 — no spaces or dashes" }
           - { label: "Email", name: "email", widget: "string" }
@@ -38,6 +38,50 @@ collections:
           - { label: "Years of Experience (as shown on site)", name: "yearsExperienceDisplay", widget: "string" }
           - { label: "Service Areas", name: "serviceAreas", widget: "list", hint: "Add one area per line, e.g. Metro Manila" }
           - { label: "Specialties", name: "specialties", widget: "list", hint: "Add one per line" }
+
+      - file: "src/data/home.json"
+        label: "Homepage"
+        name: "home"
+        format: "json"
+        fields:
+          - { label: "Homepage Background Photo", name: "heroImage", widget: "image", required: false, hint: "Big photo behind the homepage headline. Leave empty to use the default stock photo. Landscape, 1600px wide or more. Pick a photo without text baked in, since the headline sits on top." }
+          - { label: "Small Label Above Headline", name: "heroEyebrow", widget: "string" }
+          - { label: "Main Headline", name: "heroHeading", widget: "string", hint: "The big text on the homepage" }
+          - { label: "Intro Paragraph", name: "heroIntro", widget: "text", hint: "Short paragraph under the headline" }
+          - { label: "Main Button Text", name: "heroPrimaryButton", widget: "string", hint: "Goes to the Developments page" }
+          - { label: "Second Button Text", name: "heroSecondaryButton", widget: "string", hint: "Opens WhatsApp" }
+          - label: "Three Highlights (strip under the photo)"
+            name: "valueProps"
+            widget: "list"
+            hint: "Works best with exactly 3."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Developments Section — Small Label", name: "featuredEyebrow", widget: "string" }
+          - { label: "Developments Section — Heading", name: "featuredHeading", widget: "string" }
+          - { label: "Developments Section — Intro", name: "featuredIntro", widget: "text" }
+          - { label: "Why Work With You — Heading", name: "reasonsHeading", widget: "string" }
+          - label: "Why Work With You — Reasons"
+            name: "reasons"
+            widget: "list"
+            hint: "Works best with exactly 3."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+          - { label: "Bottom Call-to-Action — Heading", name: "ctaHeading", widget: "string" }
+          - { label: "Bottom Call-to-Action — Text", name: "ctaText", widget: "text" }
+
+      - file: "src/data/pages.json"
+        label: "Other Page Text & Footer"
+        name: "pages"
+        format: "json"
+        fields:
+          - { label: "Developments Page — Heading", name: "projectsHeading", widget: "string" }
+          - { label: "Developments Page — Intro", name: "projectsIntro", widget: "text" }
+          - { label: "Blog Page — Heading", name: "blogHeading", widget: "string" }
+          - { label: "Blog Page — Intro", name: "blogIntro", widget: "text" }
+          - { label: "Footer Note", name: "footerNote", widget: "text", required: false, hint: "Small print at the very bottom of every page. Leave empty to hide." }
+          - { label: "Search Engine Description", name: "siteDescription", widget: "text", hint: "What Google shows under the site name in search results. About 1-2 sentences." }
 
   - name: "projects"
     label: "Featured Developments"

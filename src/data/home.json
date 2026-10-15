@@ -1,0 +1,42 @@
+{
+  "heroImage": "",
+  "heroEyebrow": "Smart Property Guide",
+  "heroHeading": "Your Trusted Partner in Smart Real Estate Decisions",
+  "heroIntro": "Hi, I'm Carolyn Mendoza. I help families, OFWs, and first-time buyers find the right pre-selling home or condo from trusted Philippine developers — with clear guidance and flexible payment options.",
+  "heroPrimaryButton": "View Featured Developments",
+  "heroSecondaryButton": "Chat on WhatsApp",
+  "valueProps": [
+    {
+      "title": "Trusted Developers",
+      "desc": "Access to pre-selling projects from reputable Philippine developers such as Shang Properties, DMCI Homes, Arthaland, and SMDC."
+    },
+    {
+      "title": "Pre-Selling Specialist",
+      "desc": "Clear guidance on pre-selling house-and-lot and condo projects, from reservation to turnover."
+    },
+    {
+      "title": "Serving Metro Manila, Baguio, Boracay & more",
+      "desc": "Local knowledge across Metro Manila, Baguio, Boracay, Palawan, and Cebu."
+    }
+  ],
+  "featuredEyebrow": "Featured Developments",
+  "featuredHeading": "Explore Featured Developments",
+  "featuredIntro": "A selection of pre-selling house-and-lot and condominium developments Carolyn can help you reserve.",
+  "reasonsHeading": "Why Work With Carolyn",
+  "reasons": [
+    {
+      "title": "Trusted, Patient Guidance",
+      "desc": "No pressure tactics — Carolyn walks families and first-time buyers through every step, from reservation to turnover."
+    },
+    {
+      "title": "Flexible Payment Options",
+      "desc": "Spot cash, bank financing, Pag-IBIG, and rent-to-own paths explained clearly so you can choose what fits your budget."
+    },
+    {
+      "title": "Wide Market Knowledge",
+      "desc": "Familiar with developments across Metro Manila, Baguio, Boracay, Palawan, and Cebu."
+    }
+  ],
+  "ctaHeading": "Ready to Find Your Next Home or Investment?",
+  "ctaText": "Message Carolyn directly — she typically replies within the day."
+}

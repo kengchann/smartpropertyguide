@@ -8,6 +8,11 @@ const credentials = [
   { label: "Focus", value: "Pre-Selling Developments (Not Resale)" },
 ];
 
+const bioParagraphs = agent.bio
+  .split(/\n\s*\n/)
+  .map((s) => s.trim())
+  .filter(Boolean);
+
 const coverImage = agent.coverImage || "/images/site/about-arches.jpg";
 ---
 
@@ -79,7 +84,7 @@ const coverImage = agent.coverImage || "/images/site/about-arches.jpg";
     <p class="text-xs font-semibold uppercase tracking-[0.2em] text-accent-600">Her Story</p>
     <h2 class="mt-2 font-display text-3xl font-bold text-primary-700 sm:text-4xl">A Guide, Not a Salesperson</h2>
     <div class="mt-6 space-y-4 text-sm leading-relaxed text-ink/80 sm:text-base">
-      {agent.bioParagraphs.map((para) => <p>{para}</p>)}
+      {bioParagraphs.map((para) => <p>{para}</p>)}
     </div>
   </section>
 
