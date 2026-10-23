@@ -10,7 +10,7 @@ const projects = defineCollection({
     type: z.enum(["House & Lot", "Condominium"]),
     location: z.string(),
     priceFrom: z.number(),
-    priceLabel: z.string(),
+    priceLabel: z.string().optional(),
     bedrooms: z.string(),
     areaLabel: z.string(),
     paymentTerms: z.array(z.string()),

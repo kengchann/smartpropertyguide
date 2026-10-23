@@ -81,8 +81,8 @@ shows** are under **Site Profile & Settings → "Other Page Text & Footer"**.
    - **Brand / Community Tag** — e.g. "CrownAsia House & Lot Community"
    - **Development Type** — choose House & Lot or Condominium from the dropdown
    - **Location** — e.g. "Santa Rosa, Laguna"
-   - **Starting Price (numbers only)** — just the number, e.g. `4500000` (no ₱ sign, no commas)
-   - **Starting Price (shown on site)** — how it should look to visitors, e.g. `From ₱4,500,000`
+   - **Starting Price** — just the number, e.g. `4500000` (no ₱ sign, no commas). The website
+     shows it automatically as "From ₱4,500,000".
    - **Bedrooms / Layout** — e.g. "3–4 Bedrooms"
    - **Floor / Lot Area** — e.g. "Lot area: 90–120 sqm"
    - **Payment Terms** — click **"Add"** for each option that applies (Spot Cash, Bank

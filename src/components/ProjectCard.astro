@@ -1,11 +1,13 @@
 ---
+import { formatPrice } from "../lib/format";
+
 interface Project {
   id: string;
   name: string;
   brandTag: string;
   type: string;
   location: string;
-  priceLabel: string;
+  priceFrom: number;
   bedrooms: string;
   areaLabel: string;
   paymentTerms: string[];
@@ -52,7 +54,7 @@ const statusStyles: Record<string, string> = {
     <div class="my-4 h-px bg-primary-100"></div>
 
     <dl class="space-y-1.5 text-sm text-ink/80">
-      <div class="flex justify-between"><dt>Price</dt><dd class="font-semibold text-primary-700">{project.priceLabel}</dd></div>
+      <div class="flex justify-between"><dt>Price</dt><dd class="font-semibold text-primary-700">{formatPrice(project.priceFrom)}</dd></div>
       <div class="flex justify-between"><dt>Layout</dt><dd>{project.bedrooms}</dd></div>
       <div class="flex justify-between"><dt>Area</dt><dd>{project.areaLabel}</dd></div>
     </dl>
