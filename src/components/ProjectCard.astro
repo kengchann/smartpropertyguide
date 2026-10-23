@@ -1,5 +1,5 @@
 ---
-import { formatPrice } from "../lib/format";
+import { formatPrice, formatBedrooms } from "../lib/format";
 
 interface Project {
   id: string;
@@ -55,7 +55,7 @@ const statusStyles: Record<string, string> = {
 
     <dl class="space-y-1.5 text-sm text-ink/80">
       <div class="flex justify-between"><dt>Price</dt><dd class="font-semibold text-primary-700">{formatPrice(project.priceFrom)}</dd></div>
-      <div class="flex justify-between"><dt>Layout</dt><dd>{project.bedrooms}</dd></div>
+      <div class="flex justify-between"><dt>Bedroom</dt><dd>{formatBedrooms(project.bedrooms)}</dd></div>
       <div class="flex justify-between"><dt>Area</dt><dd>{project.areaLabel}</dd></div>
     </dl>
 

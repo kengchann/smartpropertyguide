@@ -3,7 +3,7 @@ import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import agent from "../../data/agent.json";
-import { formatPrice } from "../../lib/format";
+import { formatPrice, formatBedrooms } from "../../lib/format";
 
 export async function getStaticPaths() {
   const collection = await getCollection("projects");
@@ -73,8 +73,8 @@ const soldOut = project.status === "Sold Out";
             <p class="mt-1 text-sm font-semibold text-primary-700">{formatPrice(project.priceFrom)}</p>
           </div>
           <div>
-            <p class="text-xs uppercase tracking-wide text-ink/50">Layout</p>
-            <p class="mt-1 text-sm font-semibold text-primary-700">{project.bedrooms}</p>
+            <p class="text-xs uppercase tracking-wide text-ink/50">Bedroom</p>
+            <p class="mt-1 text-sm font-semibold text-primary-700">{formatBedrooms(project.bedrooms)}</p>
           </div>
           <div>
             <p class="text-xs uppercase tracking-wide text-ink/50">Area</p>

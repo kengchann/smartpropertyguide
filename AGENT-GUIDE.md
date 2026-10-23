@@ -83,7 +83,7 @@ shows** are under **Site Profile & Settings → "Other Page Text & Footer"**.
    - **Location** — e.g. "Santa Rosa, Laguna"
    - **Starting Price** — just the number, e.g. `4500000` (no ₱ sign, no commas). The website
      shows it automatically as "From ₱4,500,000".
-   - **Bedrooms / Layout** — e.g. "3–4 Bedrooms"
+   - **Bedrooms** — just a number like `2` (use `0` for Studio), or a range like "1–2 Bedrooms"
    - **Floor / Lot Area** — e.g. "Lot area: 90–120 sqm"
    - **Payment Terms** — click **"Add"** for each option that applies (Spot Cash, Bank
      Financing, Pag-IBIG Financing, Rent-to-Own)

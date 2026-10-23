@@ -100,7 +100,7 @@ collections:
       - { label: "Development Type", name: "type", widget: "select", options: ["House & Lot", "Condominium"] }
       - { label: "Location", name: "location", widget: "string", hint: "e.g. Bacoor, Cavite" }
       - { label: "Starting Price", name: "priceFrom", widget: "number", value_type: "int", hint: "Numbers only, no commas or ₱ sign, e.g. 4500000. The website adds the ₱ sign and commas automatically." }
-      - { label: "Bedrooms / Layout", name: "bedrooms", widget: "string", hint: "e.g. 3–4 Bedrooms or Studio – 2BR" }
+      - { label: "Bedrooms", name: "bedrooms", widget: "string", hint: "Just a number like 2 (0 = Studio) and the site writes '2 Bedrooms'. Or type a range like 1–2 Bedrooms." }
       - { label: "Floor / Lot Area", name: "areaLabel", widget: "string", hint: "e.g. Lot area: 90–120 sqm" }
       - { label: "Payment Terms", name: "paymentTerms", widget: "list", hint: "Add one per line, e.g. Spot Cash, Bank Financing, Rent-to-Own" }
       - { label: "Status", name: "status", widget: "select", options: ["Selling", "Limited Units Left", "Sold Out"] }
